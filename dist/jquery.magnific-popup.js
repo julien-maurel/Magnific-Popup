@@ -332,7 +332,10 @@ MagnificPopup.prototype = {
 		if(mfp.isIE7) {
 			classesToadd += ' mfp-ie7';
 		}
-		if(classesToadd) {
+		if(mfp.probablyMobile) {
+			classesToadd += ' mfp-mobile';
+		}
+                if(classesToadd) {
 			mfp._addClassToMFP( classesToadd );
 		}
 
