@@ -480,6 +480,8 @@ MagnificPopup.prototype = {
 	updateItemHTML: function() {
 		var item = mfp.items[mfp.index];
 
+		_mfpTrigger('BeforeDetach', [mfp.currItem ? mfp.currItem.type : '']);
+
 		// Detach and perform modifications
 		mfp.contentContainer.detach();
 
